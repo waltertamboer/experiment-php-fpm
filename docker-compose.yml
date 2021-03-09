@@ -3,15 +3,15 @@ version: '3'
 services:
   php:
     build:
-      dockerfile: ../.docker/php-fpm/Dockerfile
-      context: ..
+      dockerfile: .docker/php-fpm/Dockerfile
+      context: .
     volumes:
       - ./src:/usr/share/nginx/html
 
   webserver:
     build:
-      dockerfile: ../.docker/nginx/Dockerfile
-      context: ..
+      dockerfile: .docker/nginx/Dockerfile
+      context: .
     volumes:
       - ./src:/usr/share/nginx/html
     ports:
